@@ -24,13 +24,13 @@ namespace U1S3Exam
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// Controllo lblCartContent.
+        /// Controllo pnlCartContent.
         /// </summary>
         /// <remarks>
         /// Campo generato automaticamente.
         /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblCartContent;
+        protected global::System.Web.UI.WebControls.Panel pnlCartContent;
 
         /// <summary>
         /// Controllo btnClearCart.

@@ -35,7 +35,7 @@ namespace U1S3Exam
             }
         }
 
-        // Creo una classe Product con le proprietà
+        // Creo una classe Product con le proprietà che posso riutilizzare in altre pagine 
         public class Product
         {
             public string Name { get; set; }

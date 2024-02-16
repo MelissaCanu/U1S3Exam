@@ -10,7 +10,7 @@
     <form id="form1" runat="server">
         <div>
             <h2>Il tuo Carrello</h2>
-            <asp:Label ID="lblCartContent" runat="server" Text=""></asp:Label>
+            <asp:Panel ID="pnlCartContent" runat="server"></asp:Panel>
             <br />
             <asp:Button ID="btnClearCart" runat="server" Text="Svuota Carrello" OnClick="btnClearCart_Click" />
         </div>
