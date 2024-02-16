@@ -63,10 +63,10 @@ namespace U1S3Exam
         }
 
 
-
+        //metodo per svuotare il carrello
         protected void btnClearCart_Click(object sender, EventArgs e)
         {
-            // Rimuovo il cookie del carrello
+        
             if (Request.Cookies["Cart"] != null)
             {
                 Response.Cookies["Cart"].Expires = DateTime.Now.AddDays(-1);

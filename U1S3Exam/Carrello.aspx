@@ -7,9 +7,10 @@
     <title>Carrello</title>
     <link href="/Content/bootstrap.min.css" rel="stylesheet" />
     <style>
-          body{
+        body {
             background-color: #4618AC;
         }
+
         h1 {
             color: white;
             text-align: center;
@@ -17,6 +18,7 @@
             text-shadow: 2px 2px 4px #000000;
             margin-bottom: 50px;
         }
+
         .custom-btn {
             background-color: transparent;
             color: white;
@@ -25,10 +27,12 @@
             padding: 5px 20px;
             box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
         }
-        .custom-btn:hover{
-            background-color:  #22C299;
-            color: white;
-        }
+
+            .custom-btn:hover {
+                background-color: #22C299;
+                color: white;
+            }
+
         .custom-btn2 {
             background-color: darkred;
             color: white;
@@ -36,16 +40,17 @@
             border-radius: 30px;
             padding: 5px 20px;
             box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
-}
-        .custom-card{
+        }
+
+        .custom-card {
             background-color: #1F0A4D;
             color: white;
         }
-        .card-title{
+
+        .card-title {
             color: #22C299;
         }
-    
-</style>
+    </style>
 </head>
 <body">
     
@@ -55,6 +60,7 @@
                 <div class="card-body">
                     <h2 class="card-title">Il tuo Carrello</h2>
 
+                    <!--Panel per visualizzare il contenuto del carrello e il pulsante per svuotarlo--> 
                     <asp:Panel ID="pnlCartContent" runat="server"></asp:Panel>
                     <br />
                     <asp:Button ID="btnClearCart" runat="server" Text="Svuota Carrello" OnClick="btnClearCart_Click" CssClass="custom-btn2" />
