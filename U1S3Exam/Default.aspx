@@ -37,13 +37,18 @@
         .card-title{
             color: #22C299;
         }
+        #btnGoToCart {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
     </style>
 </head>
 <body>
     <form id="form1" runat="server">
         <div>
             <h1>Videogame Shop</h1>
-
+             <div> <asp:Button ID="btnGoToCart" runat="server" Text="Vai al Carrello" CssClass="custom-btn" OnClick="btnGoToCart_Click" /></div>
             <!--Repeater per visualizzare i prodotti con img, nome e prezzo-->
             <asp:Repeater ID="Repeater1" runat="server">
                 <HeaderTemplate>

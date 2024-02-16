@@ -39,6 +39,13 @@ namespace U1S3Exam
 
         }
 
+        protected void btnGoToCart_Click(object sender, EventArgs e)
+        {
+            // Redirect to the shopping cart page
+            Response.Redirect("Carrello.aspx");
+        }
+
+
         protected void btnAddToCart_Click(object sender, EventArgs e)
         {
             // Ottengo il nome del prodotto dalla query string
@@ -57,8 +64,8 @@ namespace U1S3Exam
             cartCookie.Expires = DateTime.Now.AddDays(1);
             Response.Cookies.Add(cartCookie);
 
-            // Reindirizzo alla pagina Carrello.aspx
-            Response.Redirect("Carrello.aspx");
+           //mostro alert di successo
+            ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('Prodotto aggiunto al carrello!')", true);
 
         }
     }

@@ -24,6 +24,15 @@ namespace U1S3Exam
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
+        /// Controllo btnGoToCart.
+        /// </summary>
+        /// <remarks>
+        /// Campo generato automaticamente.
+        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnGoToCart;
+
+        /// <summary>
         /// Controllo Repeater1.
         /// </summary>
         /// <remarks>

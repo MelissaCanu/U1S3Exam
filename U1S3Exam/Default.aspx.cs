@@ -54,6 +54,12 @@ namespace U1S3Exam
             public string Description { get; set; }
         }
 
+        protected void btnGoToCart_Click(object sender, EventArgs e)
+        {
+            // Redirect to the shopping cart page
+            Response.Redirect("Carrello.aspx");
+        }
+
 
         protected void btnDettagli_Click1(object sender, EventArgs e)
         {

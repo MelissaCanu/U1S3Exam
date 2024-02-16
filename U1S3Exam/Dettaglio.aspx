@@ -6,17 +6,19 @@
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Dettaglio</title>
-     <link href="/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="/Content/bootstrap.min.css" rel="stylesheet" />
     <style>
         body {
             background-color: #4618AC;
         }
+
         .container {
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh; 
+            height: 100vh;
         }
+
         h1 {
             color: white;
             text-align: center;
@@ -24,6 +26,7 @@
             text-shadow: 2px 2px 4px #000000;
             margin-bottom: 50px;
         }
+
         .custom-btn {
             background-color: transparent;
             color: white;
@@ -32,22 +35,32 @@
             padding: 5px 20px;
             box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
         }
-        .custom-btn:hover {
-            background-color: #22C299;
-            color: white;
-        }
+
+            .custom-btn:hover {
+                background-color: #22C299;
+                color: white;
+            }
+
         .custom-card {
             background-color: #1F0A4D;
             color: white;
         }
+
         .card-title {
             color: #22C299;
+        }
+        #btnGoToCart {
+            position: absolute;
+            top: 20px;
+            right: 20px;
         }
     </style>
 </head>
 <body>
     <form id="form1" runat="server">
+           <div><asp:Button ID="btnGoToCart" runat="server" Text="Vai al Carrello" CssClass="custom-btn" OnClick="btnGoToCart_Click" /></div>
         <div class="container">
+
             <div class="card custom-card" style="width: 50rem;">
                 <asp:Image ID="imgProduct" runat="server" CssClass="card-img-top" AlternateText="Product Image" />
                 <div class="card-body">
