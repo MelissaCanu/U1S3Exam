@@ -11,12 +11,19 @@
             background-color: #4618AC;
         }
 
-        h1 {
+        h1, h2 {
             color: white;
             text-align: center;
             font-size: 70px;
             text-shadow: 2px 2px 4px #000000;
             margin-bottom: 50px;
+        }
+
+        .totale {
+            color: white;
+            font-size: 30px;
+            text-shadow: 2px 2px 4px #000000;
+      
         }
 
         .custom-btn {
@@ -42,6 +49,10 @@
             box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
         }
 
+.custom-btn2:hover {
+                background-color: #22C299;
+                color: white;
+            }
         .custom-card {
             background-color: #1F0A4D;
             color: white;

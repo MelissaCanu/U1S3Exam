@@ -34,9 +34,27 @@ namespace U1S3Exam
                                 // Controllo se il prezzo è valido 
                                 if (decimal.TryParse(details[1], out productPrice))
                                 {
-                                    // Visualizza nome e prezzo
-                                    pnlCartContent.Controls.Add(new LiteralControl($"{productName} - €{productPrice}"));
+                                    // card bootstrap creata per ogni prodotto nel carrello 
+                                    Panel cardPanel = new Panel();
+                                    cardPanel.CssClass = "card custom-card border border-white shadow";
 
+                                    Panel cardBodyPanel = new Panel();
+                                    cardBodyPanel.CssClass = "card-body";
+
+                                    Label nameLabel = new Label();
+                                    nameLabel.Text = productName;
+                                    nameLabel.CssClass = "card-title";
+
+                                    Label priceLabel = new Label();
+                                    priceLabel.Text = $"€{productPrice}";
+
+                                    //con controls.add aggiungo i controlli al pannello 
+                                    cardBodyPanel.Controls.Add(nameLabel); 
+                                    cardBodyPanel.Controls.Add(new LiteralControl("<br />"));
+                                    cardBodyPanel.Controls.Add(priceLabel);
+
+                                    cardPanel.Controls.Add(cardBodyPanel);
+                                    pnlCartContent.Controls.Add(cardPanel);
                                     pnlCartContent.Controls.Add(new LiteralControl("<br />"));
 
                                     total += productPrice;
@@ -47,20 +65,38 @@ namespace U1S3Exam
                                     pnlCartContent.Controls.Add(new LiteralControl($"Errore: prezzo non valido per {productName}<br />"));
                                 }
                             }
-
                         }
                     }
 
                     // Mostro il totale da pagare o un messaggio se il carrello è vuoto 
-                    pnlCartContent.Controls.Add(new LiteralControl($"<br />Totale: €{total}"));
+                    if (total > 0)
+                    {
+                        Panel totalPanel = new Panel();
+                        totalPanel.CssClass = "card custom-card";
+
+                        Panel totalBodyPanel = new Panel();
+                        totalBodyPanel.CssClass = "card-body";
+
+                        Label totalLabel = new Label();
+                        totalLabel.Text = $"Totale: €{total}";
+                        totalLabel.CssClass = "totale";
+
+                        totalBodyPanel.Controls.Add(totalLabel);
+                        totalPanel.Controls.Add(totalBodyPanel);
+                        pnlCartContent.Controls.Add(totalPanel);
+                    }
+                    else
+                    {
+                        pnlCartContent.Controls.Add(new LiteralControl("Il carrello è vuoto"));
+                    }
                 }
                 else
                 {
                     pnlCartContent.Controls.Add(new LiteralControl("Il carrello è vuoto"));
                 }
-
             }
         }
+
 
 
         //metodo per svuotare il carrello
